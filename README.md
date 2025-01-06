@@ -1,2 +1,7 @@
-# traffic_violation
-Digitaail Traffic of Violation System
+## Traffic Violation
+
+Traffic Violations Digitization System
+
+#### License
+
+mit
