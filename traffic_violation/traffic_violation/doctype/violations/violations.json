@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-01-13 20:13:55.310946",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "violation_details_section",
+  "document_number",
+  "violation_date",
+  "column_break_gapm",
+  "violation_name",
+  "price",
+  "location_violation",
+  "owner_details_section",
+  "national_number",
+  "full_name",
+  "column_break_ejxh",
+  "plate_type",
+  "plate_number",
+  "chassis_namber",
+  "section_break_lklm",
+  "violation_image"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_gapm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "id_violation_type.violation_name",
+   "fieldname": "violation_name",
+   "fieldtype": "Link",
+   "label": "Violation Name",
+   "options": "Violation Type"
+  },
+  {
+   "fieldname": "violation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Violation Details"
+  },
+  {
+   "fieldname": "section_break_lklm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "violation_image",
+   "fieldtype": "Attach",
+   "label": "Violation Image"
+  },
+  {
+   "fieldname": "document_number",
+   "fieldtype": "Link",
+   "label": "Number Plate",
+   "options": "Car Card"
+  },
+  {
+   "fieldname": "owner_details_section",
+   "fieldtype": "Section Break",
+   "label": "Owner Details"
+  },
+  {
+   "fetch_from": "document_number.national_number",
+   "fieldname": "national_number",
+   "fieldtype": "Data",
+   "label": "National Number"
+  },
+  {
+   "fetch_from": "document_number.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "column_break_ejxh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "document_number.plate_type",
+   "fieldname": "plate_type",
+   "fieldtype": "Data",
+   "label": "Plate Type"
+  },
+  {
+   "fetch_from": "document_number.plate_number",
+   "fieldname": "plate_number",
+   "fieldtype": "Data",
+   "label": "Plate Number"
+  },
+  {
+   "fieldname": "violation_date",
+   "fieldtype": "Datetime",
+   "label": "Violation Date"
+  },
+  {
+   "fetch_from": "document_number.chassis_number",
+   "fieldname": "chassis_namber",
+   "fieldtype": "Data",
+   "label": "Chassis Namber"
+  },
+  {
+   "fetch_from": "violation_name.price_violation",
+   "fieldname": "price",
+   "fieldtype": "Data",
+   "label": "Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "location_violation",
+   "fieldtype": "Data",
+   "label": "Location Violation"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-06 21:30:11.526393",
+ "modified_by": "Administrator",
+ "module": "Traffic Violation",
+ "name": "Violations",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

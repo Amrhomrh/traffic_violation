@@ -4,6 +4,11 @@ app_publisher = "Amr"
 app_description = "Traffic Violations Digitization System"
 app_email = "amr@gmail.com"
 app_license = "mit"
+
+app_include = [
+    "traffic_violation.api.create_violation"
+]
+
 # required_apps = []
 
 # Includes in <head>

@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "autoname": "format:{chassis_number}-{plate_number}-{plate_type}",
+ "creation": "2025-01-13 19:34:48.508229",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "document_details_section",
+  "document_number",
+  "column_break_krkr",
+  "issuance_date",
+  "expiration_date",
+  "owner_details_section",
+  "national_number",
+  "full_name",
+  "column_break_bmwl",
+  "plate_type",
+  "chassis_number",
+  "plate_number",
+  "vehicle_specifications_section",
+  "seat_number",
+  "brand",
+  "engine"
+ ],
+ "fields": [
+  {
+   "fieldname": "national_number",
+   "fieldtype": "Link",
+   "label": "National Number",
+   "options": "Owner",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.national_number",
+   "fetch_from": "national_number.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "options": "Owner",
+   "read_only": 1
+  },
+  {
+   "fieldname": "plate_type",
+   "fieldtype": "Select",
+   "label": "Plate Type",
+   "options": "\u0646\u0642\u0644\n\u062e\u0635\u0648\u0635\u064a\n\u0623\u062c\u0631\u0629"
+  },
+  {
+   "fieldname": "plate_number",
+   "fieldtype": "Data",
+   "label": "Plate Number"
+  },
+  {
+   "fieldname": "document_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "issuance_date",
+   "fieldtype": "Date",
+   "label": "Issuance Date"
+  },
+  {
+   "fieldname": "expiration_date",
+   "fieldtype": "Date",
+   "label": "Expiration Date"
+  },
+  {
+   "fieldname": "owner_details_section",
+   "fieldtype": "Section Break",
+   "label": "Owner Details"
+  },
+  {
+   "fieldname": "document_details_section",
+   "fieldtype": "Section Break",
+   "label": "Document Details"
+  },
+  {
+   "fieldname": "column_break_krkr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bmwl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_specifications_section",
+   "fieldtype": "Section Break",
+   "label": "Vehicle specifications"
+  },
+  {
+   "fieldname": "seat_number",
+   "fieldtype": "Link",
+   "label": "Seat Number",
+   "options": "Vehicle Specifications",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "seat_number.brand",
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "label": "Brand"
+  },
+  {
+   "fetch_from": "seat_number.engine",
+   "fieldname": "engine",
+   "fieldtype": "Data",
+   "label": "Engine"
+  },
+  {
+   "fieldname": "chassis_number",
+   "fieldtype": "Data",
+   "label": "Chassis Number"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-06 20:12:49.758074",
+ "modified_by": "Administrator",
+ "module": "Traffic Violation",
+ "name": "Car Card",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

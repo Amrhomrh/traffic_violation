@@ -1,0 +1,29 @@
+{
+ "cards": [
+  {
+   "card": "Test num card"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Violations By Type",
+   "width": "Half"
+  },
+  {
+   "chart": "For Violation Type",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-02-06 20:50:48.304970",
+ "dashboard_name": "Test",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-02-06 21:06:24.020020",
+ "modified_by": "Administrator",
+ "module": "Traffic Violation",
+ "name": "Test",
+ "owner": "Administrator"
+}
